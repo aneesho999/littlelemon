@@ -2,8 +2,6 @@
 //  FoodList.swift
 //  littlelemon-iOS-capstone
 //
-//  Created by Aneesh Oak on 10/04/25.
-//
 
 import SwiftUI
 
