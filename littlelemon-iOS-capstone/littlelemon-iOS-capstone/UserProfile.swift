@@ -2,7 +2,6 @@
 //  UserProfile.swift
 //  littlelemon-iOS-capstone
 //
-//  Created by Aneesh Oak on 10/04/25.
 //
 
 import SwiftUI
@@ -10,24 +9,34 @@ import SwiftUI
 struct UserProfile: View {
     @Environment(\.presentationMode) var presentation
     
-    let firstName: String = UserDefaults.standard.string(forKey: "first_name_key") ?? ""
+    let firstName: String = UserDefaults.standard.string(forKey: "first_name_key") ?? "first"
     
-    let lastName: String = UserDefaults.standard.string(forKey: "last_name_key") ?? ""
+    let lastName: String = UserDefaults.standard.string(forKey: "last_name_key") ?? "last"
     
-    let email: String = UserDefaults.standard.string(forKey: "email_key") ?? ""
+    let email: String = UserDefaults.standard.string(forKey: "email_key") ?? "email"
     
     var body: some View {
         VStack {
-            Text("Personal Information")
+            Text("Little Lemon")
+                .font(.largeTitle)
+                .font(.custom("MarkaziText-Regular", size: 20))
+        
+                .fontWeight(.bold)
+                .foregroundColor(primaryYellow)
             
-            Image("profile-image-placeholder")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-            
-            Text(firstName)
-            Text(lastName)
-            Text(email)
+            HStack {
+                Image("profile-image-placeholder")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                
+                VStack(alignment: .leading) {
+                    Text("Name: \(firstName) \(lastName)")
+                    Text("Email: \(email)")
+                }
+                .foregroundColor(primaryYellow)
+                .padding(.horizontal)
+            }
             
             Button("Logout") {
                 UserDefaults.standard.set("", forKey: kFirstName)
@@ -45,6 +54,8 @@ struct UserProfile: View {
             
             Spacer()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(primaryGreen)
     }
 }
 

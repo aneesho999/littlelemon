@@ -1,8 +1,7 @@
 //
 //  littlelemon_iOS_capstoneApp.swift
 //  littlelemon-iOS-capstone
-//
-//  Created by Aneesh Oak on 09/04/25.
+
 //
 
 import SwiftUI

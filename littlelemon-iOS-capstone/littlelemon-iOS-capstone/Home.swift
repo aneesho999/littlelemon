@@ -2,12 +2,13 @@
 //  Home.swift
 //  littlelemon-iOS-capstone
 //
-//  Created by Aneesh Oak on 10/04/25.
 //
 
 import SwiftUI
 
 struct Home: View {
+    let persistence = PersistenceController.shared
+    
     var body: some View {
         TabView {
             Menu()
@@ -21,6 +22,7 @@ struct Home: View {
                 }
         }
         .navigationBarBackButtonHidden(true)
+        .environment(\.managedObjectContext, persistence.container.viewContext)
     }
 }
 
