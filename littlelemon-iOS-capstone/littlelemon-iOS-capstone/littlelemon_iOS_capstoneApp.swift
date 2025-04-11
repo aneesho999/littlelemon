@@ -1,8 +1,7 @@
 //
 //  littlelemon_iOS_capstoneApp.swift
 //  littlelemon-iOS-capstone
-//
-//  Created by Aneesh Oak on 09/04/25.
+
 //
 
 import SwiftUI
@@ -13,7 +12,7 @@ struct littlelemon_iOS_capstoneApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboarding()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
