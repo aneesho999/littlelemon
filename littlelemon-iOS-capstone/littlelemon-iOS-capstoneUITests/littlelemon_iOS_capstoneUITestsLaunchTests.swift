@@ -1,9 +1,6 @@
 //
 //  littlelemon_iOS_capstoneUITestsLaunchTests.swift
 //  littlelemon-iOS-capstoneUITests
-//
-//  Created by Aneesh Oak on 09/04/25.
-//
 
 import XCTest
 

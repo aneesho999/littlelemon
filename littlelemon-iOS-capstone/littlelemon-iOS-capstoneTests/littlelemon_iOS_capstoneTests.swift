@@ -2,8 +2,6 @@
 //  littlelemon_iOS_capstoneTests.swift
 //  littlelemon-iOS-capstoneTests
 //
-//  Created by Aneesh Oak on 09/04/25.
-//
 
 import XCTest
 @testable import littlelemon_iOS_capstone
